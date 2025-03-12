@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,Image ,TouchableWithoutFeedback} from 'react-native';
+import { StyleSheet, Text, View,Image ,TouchableWithoutFeedback ,TouchableOpacity} from 'react-native';
 import { SafeAreaView } from 'react-native-web';
 
 export default function App() {
@@ -16,6 +16,14 @@ export default function App() {
           height:300,
           uri:"https://picsum.photos/seed/picsum/200/300"}}/>
       </TouchableWithoutFeedback>
+      <TouchableOpacity onPress={()=>{console.log("image tapped")}}>
+      <Image source={{
+          width:200,
+          height:300,
+          uri:"https://picsum.photos/200/300?grayscale"}}/>
+
+
+      </TouchableOpacity>
 
     </SafeAreaView>
   );
